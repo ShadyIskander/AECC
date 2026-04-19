@@ -1,0 +1,269 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-primary: #2A317B;
+  --color-primary-dark: #1e2460;
+  --color-secondary: #546AB2;
+  --color-secondary-light: #A8B0D9;
+  --color-gold: #F1A91E;
+  --color-sky: #65CBE3;
+  --color-surface: #EDEDED;
+  --color-white: #ffffff;
+  --color-dark: #1a1a2e;
+  --color-muted: #6b7280;
+
+  --shadow-card: 0 4px 24px rgba(42,49,123,0.10);
+  --shadow-hover: 0 8px 40px rgba(42,49,123,0.18);
+}
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: #EDEDED;
+    color: #1a1a2e;
+    font-family: var(--font-inter, system-ui, sans-serif);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-playfair, Georgia, serif);
+    line-height: 1.2;
+  }
+
+  [dir='rtl'] h1,
+  [dir='rtl'] h2,
+  [dir='rtl'] h3,
+  [dir='rtl'] h4,
+  [dir='rtl'] p,
+  [dir='rtl'] span,
+  [dir='rtl'] a,
+  [dir='rtl'] button,
+  [dir='rtl'] li {
+    font-family: 'Cairo', 'Tajawal', var(--font-inter), system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  /* ── Layout helpers ── */
+  .section-padding { padding-top: 5rem; padding-bottom: 5rem; }
+
+  .container-pad {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ── Gradients ── */
+  .hero-gradient {
+    background: linear-gradient(135deg, #1e2460 0%, #2A317B 55%, #546AB2 100%);
+  }
+
+  .gold-gradient  { background: linear-gradient(135deg, #F1A91E 0%, #f7c44e 100%); }
+
+  .text-gradient-primary {
+    background: linear-gradient(135deg, #2A317B, #546AB2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── Glass ── */
+  .glass {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.25);
+  }
+
+  /* ── Cards ── */
+  .card-hover {
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-card);
+    border-radius: 1rem;
+  }
+  .card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  /* ── Buttons ── */
+  .btn-primary {
+    background: #F1A91E;
+    color: #1e2460;
+    font-weight: 700;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    transition: all 0.25s ease;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+  }
+  .btn-primary:hover {
+    background: #f7c44e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(241,169,30,0.4);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    border: 2px solid rgba(255,255,255,0.6);
+    transition: all 0.25s ease;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .btn-secondary:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: #ffffff;
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #2A317B;
+    font-weight: 600;
+    padding: 0.65rem 1.75rem;
+    border-radius: 9999px;
+    border: 2px solid #2A317B;
+    transition: all 0.25s ease;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .btn-outline:hover {
+    background: #2A317B;
+    color: #ffffff;
+  }
+
+  /* ── Divider accent ── */
+  .gold-bar {
+    width: 56px;
+    height: 3px;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, #F1A91E, #2A317B);
+    margin-bottom: 1.5rem;
+  }
+
+  /* ── Section label ── */
+  .label-gold {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #F1A91E;
+  }
+
+  /* ── Animations ── */
+  .animate-fade-up { animation: fadeUp 0.6s ease-out forwards; }
+  .animate-fade-in { animation: fadeIn 0.8s ease-out forwards; }
+
+  /* ── Noise overlay (optional) ── */
+  .noise-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Smooth section transitions ── */
+@keyframes sectionSlideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Horizontal scroll shimmer ── */
+@keyframes shimmer {
+  from { background-position: -200% center; }
+  to   { background-position: 200% center; }
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #F1A91E 0%, #f7e08a 50%, #F1A91E 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+/* ── Floating animation ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+.animate-float { animation: float 4s ease-in-out infinite; }
+
+/* ── Pulse ring ── */
+@keyframes pulseRing {
+  0%   { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+.pulse-ring::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: currentColor;
+  animation: pulseRing 1.8s ease-out infinite;
+}
+
+/* ── Gradient border hover ── */
+.gradient-border {
+  position: relative;
+  border-radius: 1.5rem;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, #F1A91E, #2A317B, #65CBE3);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.gradient-border:hover::before {
+  opacity: 1;
+}
+
+/* ── Section divider wave ── */
+.wave-divider {
+  position: relative;
+  overflow: hidden;
+}
+.wave-divider::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: inherit;
+  clip-path: ellipse(55% 100% at 50% 0%);
+}

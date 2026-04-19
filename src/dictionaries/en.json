@@ -1,0 +1,135 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About  AECC",
+    "speakers": "Speakers",
+    "credologos": "Credologos",
+    "thirdSpace": "Third Space",
+    "east": "East",
+    "counseling": "ICCP",
+    "e30": "E30",
+    "events": "Events",
+    "login": "Login",
+    "logout": "Logout",
+    "admin": "Admin",
+    "bookNow": "Book Now"
+  },
+  "hero": {
+    "tagline": "Engaging Minds\nMending Hearts\nEmpowering Hands",
+    "subtitle": "",
+    "explore": "Explore",
+    "viewEvents": "View Events"
+  },
+  "brands": {
+    "title": "Our Initiatives",
+    "subtitle": "Five distinct yet connected branches of one intellectual, spiritual, and communal ecosystem.",
+    "credologos": {
+      "name": "Credologos",
+      "tagline": "Faith. Reason. Dialogue.",
+      "description": "Exploring the intersection of theology, philosophy, and science — equipping believers with thoughtful answers to life's deepest questions.",
+      "cta": "Explore Credologos"
+    },
+    "thirdSpace": {
+      "name": "Third Space",
+      "tagline": "Community. Belonging. Safe Harbor.",
+      "description": "A welcoming community space where people gather to share, listen, and belong — not driven by business, but by genuine human connection and care.",
+      "cta": "Join Third Space"
+    },
+    "east": {
+      "name": "EAST",
+      "tagline": "Theology. Society. Ministry in the Marketplace.",
+      "description": "The Egyptian Academy for Society and Theology (EAST) offers online and in-person courses, certificates, and a master's program in ministry in the marketplace — equipping Christians to be a faithful presence in their professional spheres.",
+      "cta": "Explore EAST Academy"
+    },
+    "counseling": {
+      "name": "ICCP",
+      "tagline": "Healing. Growth. Wholeness.",
+      "description": "The Institute of Clinical Counseling and Psychology — equipping practitioners with the tools to bring healing, hope, and transformation to individuals and families through professional Christian counseling education.",
+      "cta": "Explore ICCP"
+    },
+    "e30": {
+      "name": "E30",
+      "tagline": "Vision. Enterprise. Kingdom.",
+      "description": "A platform for Christian entrepreneurs and business leaders — integrating faith principles into bold, kingdom-driven enterprise and professional excellence.",
+      "cta": "Join E30"
+    }
+  },
+  "events": {
+    "title": "Upcoming Events",
+    "subtitle": "Conferences, workshops, and courses to help you grow.",
+    "all": "All",
+    "viewAll": "View All Events",
+    "noEvents": "No events found.",
+    "filterType": "Filter by Type",
+    "filterBrand": "Filter by Initiative",
+    "types": {
+      "event": "Event",
+      "course": "Course",
+      "workshop": "Workshop"
+    },
+    "free": "Free",
+    "bookNow": "Book Now",
+    "registerFree": "Register Free",
+    "location": "Location",
+    "date": "Date",
+    "price": "Price",
+    "capacity": "Capacity",
+    "spotsLeft": "spots left",
+    "online": "Online"
+  },
+  "about": {
+    "title": "About AECC",
+    "subtitle": "A place where truth is explored thoughtfully and beautifully.",
+    "vision": "Our Vision",
+    "visionText": "AECC exists to create spaces — intellectual, communal, and cultural — where people can wrestle with the big questions and find that faith, reason, and beauty are not at odds.",
+    "mission": "Our Mission",
+    "missionText": "Through five distinct initiatives, we serve thinkers and seekers in the Arab world and beyond, offering courses, events, and conversations that honor both the mind and the heart."
+  },
+  "booking": {
+    "title": "Book Your Spot",
+    "summary": "Booking Summary",
+    "proceedPayment": "Proceed to Payment",
+    "registerFree": "Confirm Registration",
+    "loginRequired": "Please log in to book this event.",
+    "login": "Login to Continue",
+    "success": "Booking Confirmed!",
+    "successMsg": "You're registered. Check your email for details.",
+    "failure": "Payment Failed",
+    "failureMsg": "Something went wrong. Please try again.",
+    "tryAgain": "Try Again",
+    "backToEvents": "Back to Events"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "name": "Full Name",
+    "signup": "Sign Up",
+    "haveAccount": "Already have an account?",
+    "noAccount": "Don't have an account?",
+    "loginSuccess": "Logged in successfully.",
+    "signupSuccess": "Account created successfully.",
+    "forgotPassword": "Forgot Password?"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "events": "Events",
+    "bookings": "Bookings",
+    "users": "Users",
+    "newEvent": "New Event",
+    "editEvent": "Edit Event",
+    "deleteEvent": "Delete Event",
+    "totalEvents": "Total Events",
+    "totalBookings": "Total Bookings",
+    "revenue": "Revenue",
+    "publishedEvents": "Published Events"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "tagline": "A place where truth is explored thoughtfully.",
+    "quickLinks": "Quick Links",
+    "initiatives": "Our Initiatives",
+    "contact": "Contact"
+  }
+}
