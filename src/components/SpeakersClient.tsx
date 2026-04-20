@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import type { Dictionary } from '@/lib/dictionaries'
-import type { Speaker } from './page'
+import type { Speaker } from '@/app/[lang]/team/page'
 import Newsletter from '@/components/Newsletter'
 
 // ── Morphing blob ────────────────────────────────────────────────
